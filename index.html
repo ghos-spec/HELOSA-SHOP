@@ -75,8 +75,7 @@
     <section class="home">
         <div class="home-text" id="home">
             <span>Achetez maintenant</span>
-            <h1>Nouvel arrivage de</h1><br>Helosa Shop est une boutique en ligne dédiée à la mode féminine, proposant une sélection tendance de vêtements pour toutes les occasions. 
-            Que vous recherchiez des pièces élégantes, décontractées ou modernes, notre collection allie style, confort et qualité.
+            <h1>Nouvel arrivage de</h1><br>Helosa Shop est une boutique en ligne dédiée à la mode féminine, proposant une sélection tendance de vêtements pour toutes les occasions. Que vous recherchiez des pièces élégantes, décontractées ou modernes, notre collection allie style, confort et qualité. 
             Découvrez nos dernières nouveautés sur Helosa Shop et trouvez les tenues qui sublimeront votre garde-robe. <br>
         </div>
         <div class="home-img"></div>
@@ -484,6 +483,31 @@
             </div>
         </div>
     </section>
+
+
+<!-- Fenêtre modale -->
+<div id="commentsModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Commentaires</h2>
+        <div id="commentsList"></div>
+    </div>
+</div>
+
+<!-- Formulaire pour ajouter un commentaire -->
+<section id="reviews">
+    <h2>Laissez un commentaire</h2>
+    <form id="commentForm">
+        <input type="text" id="name" placeholder="Votre nom" required>
+        <input type="email" id="email" placeholder="Votre email" required>
+        <textarea id="comment" placeholder="Votre commentaire" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+    <!-- Bouton pour ouvrir la modale -->
+    <button id="openCommentsBtn" class="btn">Voir les commentaires</button>
+    
+    
     <!-- footer -->
     <section class="footer">
         <div class="footer-box">
