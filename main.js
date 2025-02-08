@@ -75,3 +75,47 @@ var swiper = new Swiper(".nouvel-arrivage", {
     },
 })
 
+document.addEventListener("DOMContentLoaded", function () {
+    const openModalBtn = document.getElementById("openCommentsBtn");
+    const closeModalBtn = document.querySelector(".close");
+    const modal = document.getElementById("commentsModal");
+    const commentForm = document.getElementById("commentForm");
+    const commentsList = document.getElementById("commentsList");
+
+    // Ouvrir la fenêtre modale
+    openModalBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    // Fermer la fenêtre modale
+    closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Fermer la modale si on clique en dehors
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Soumettre un commentaire
+    commentForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const comment = document.getElementById("comment").value;
+
+        if (name && email && comment) {
+            const commentElement = document.createElement("div");
+            commentElement.classList.add("comment-box");
+            commentElement.innerHTML = `<strong>${name}</strong> <br> ${comment}`;
+            
+            commentsList.appendChild(commentElement);
+
+            // Réinitialiser le formulaire
+            commentForm.reset();
+        }
+    });
+});
